@@ -1,22 +1,20 @@
 import serial
 import io
 import time
-#############################
-ser = serial.Serial()       
-filename = "abcd.log"                   
+
+ser = serial.Serial()
+filename = "abcd.log"
+#q = Queue.Queue()
 user  = "cisco"
 password = "eccom@123"
 enable_password = ""
 console ="COM8"
-baudrate = 9600
-stopbits = 1
-bytesize = 8
-#############################
+
 def serNetCall():
- ser.baudrate = baudrate
+ ser.baudrate = 9600
  ser.port = console
- ser.bytesize= bytesize
- ser.stopbits=stopbits
+ ser.bytesize=8
+ ser.stopbits=1
  ser
  ser.open()
  time.sleep(5)
@@ -65,7 +63,7 @@ def shua_file():
 
      if "^" not in ser.read(ser.inWaiting()):
       ser.write(line +'\n\r')
-      print "line %(count)d writing was successful"%{"count":count}
+      print "line %(count)d  success"%{"count":count}
       count=count+1
       print line
       print ser.read(ser.inWaiting())
