@@ -1,20 +1,22 @@
 import serial
 import io
 import time
-
-ser = serial.Serial()
-filename = "abcd.log"
-#q = Queue.Queue()
+#############################
+ser = serial.Serial()       
+filename = "abcd.log"                   
 user  = "cisco"
 password = "eccom@123"
 enable_password = ""
 console ="COM8"
-
+baudrate = 9600
+stopbits = 1
+bytesize = 8
+#############################
 def serNetCall():
- ser.baudrate = 9600
+ ser.baudrate = baudrate
  ser.port = console
- ser.bytesize=8
- ser.stopbits=1
+ ser.bytesize= bytesize
+ ser.stopbits=stopbits
  ser
  ser.open()
  time.sleep(5)
