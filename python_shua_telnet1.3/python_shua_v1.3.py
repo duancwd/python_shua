@@ -55,7 +55,7 @@ def shua_file():
      count=count+1;
      q.put(count)
      #print line+"\n\r"
-     time.sleep(0.4)
+     time.sleep(0.1)
      if q.get()< 9999:
       telnet.write(line +'\n\r')
       print "line %(count)d writing was successful"%{"count":count}
