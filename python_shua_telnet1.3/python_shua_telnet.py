@@ -60,7 +60,7 @@ def shua_file():
       telnet.write(line +'\n\r')
       print "line %(count)d writing was successful"%{"count":count}
      else:
-      print "WTF£¬something wrong here!"
+      print "WTFÂ£Â¬something wrong here!"
       break
     telnet.close
 
