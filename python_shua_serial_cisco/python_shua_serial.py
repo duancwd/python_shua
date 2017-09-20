@@ -69,7 +69,7 @@ def shua_file():
       print ser.read(ser.inWaiting())
      else:
       print ser.read(ser.inWaiting())
-      print "WTF£¬something wrong!"
+      print "WTFÂ£Â¬something wrong!"
       break
     ser.close()
     print"[####################] 100% -- SUCCESS"
